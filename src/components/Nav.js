@@ -1,24 +1,17 @@
 import { useState } from "react";
-
-const ChangeColour = () => {
-    
-}
+import { Link } from "react-router-dom";
+import NavItem from "./NavItem";
 
 
 function Nav() {
-    const [clicked, setClicked] = useState(false);
+    const [pages, setClicked] = useState(["PC01", "PC02", "CreativeTech"]);
 
 
   return (
     <nav className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
         <ul>
             <ol className="flex">
-                <li id="pc01" className="mx-5">
-                    <Link onClick={() => ChangeColour} to="/pages/PC01">PCO1</Link>
-                </li>
-                <li id="pc02" className="mx-5">
-                    <Link to="/pages/PC02">PCO2</Link>
-                </li>
+                {pages.map((page) => <NavItem key={page} page={page}/>)}
             </ol>
         </ul>
     </nav>
