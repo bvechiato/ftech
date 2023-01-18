@@ -1,6 +1,11 @@
+import Course from "../components/Course"
+
 function PC01() {
   return (
-    <div>pc01</div>
+    <div>
+      <h2>PC01</h2>
+      <Course name="PC01" />
+    </div>
   )
 }
 

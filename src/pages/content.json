@@ -1,0 +1,33 @@
+{
+    "PC01": 
+    {
+        "Term 1": 
+        {
+
+        },
+        "Term 2": 
+        {
+
+        },
+        "Term 3": 
+        {
+            "Function": "A pre-defined set of instructions which perform a single task",
+            "Parameter": "A variable for required data that a function uses",
+            "Argument": "A value that is passed into a parameter in a function",
+            "Type hints": "Suggested data type for parameters/return value",
+            "Return": "Sends data back to the calling instruction"
+        }
+    },
+    "PC02": 
+    {
+        "Term 1": {},
+        "Term 2": {},
+        "Term 3": {}
+    },
+    "CreativeTech": 
+    {
+        "Term 1": {},
+        "Term 2": {},
+        "Term 3": {}
+    }
+}
