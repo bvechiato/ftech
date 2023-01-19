@@ -11,8 +11,9 @@ function App() {
       <Nav />
 
       <Routes>
-        <Route path="/pages/PC01" element={<Course name="PCO1" />}>PC01</Route>
-        <Route path="/pages/PC02" element={<Course name="PCO2" />}>PC02</Route>
+        <Route path="/pages/PC01" element={<Course name="PC01" />}>PC01</Route>
+        <Route path="/pages/PC02" element={<Course name="PC02" />}>PC02</Route>
+        <Route path="/pages/CreativeTech" element={<Course name="CreativeTech" />}>CreativeTech</Route>
       </Routes>
     </div>
   );

@@ -1,11 +1,31 @@
+import { useState } from "react";
+import { useEffect } from "react";
+import { db } from "../firebase";
+import { ref, onValue } from "firebase/database";
 import Definition from "./Definition"
 
-function Term({ term }) {
-  return (
-    <div>
-        {term.map((definition) => <Definition definition={term[definition]}/>)}
-    </div>
-  )
+function Term({ course, term }) {
+    const [terms, setTerms] = useState([]);
+
+    useEffect(() => {
+        const query = ref(db, `Content/${course}/${term}`);
+        return onValue(query, (snapshot) => {
+          const data = snapshot.val();
+          console.log(Object.keys(data));
+    
+          if (snapshot.exists()) {
+            Object.keys(data).map((term) => {
+                setTerms((terms) => [...terms, term]);
+            });
+          }
+        });
+      }, []);
+
+    return (
+        <div>
+            {terms.map((definition) => <Definition key={definition} definition={definition}/>)}
+        </div>
+    )
 }
 
 export default Term

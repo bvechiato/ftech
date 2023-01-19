@@ -1,7 +1,7 @@
-function Definition({ definition }) {
-  return (
-    <div>{ definition[0] }</div>
-  )
+function Definition({ definitionTerm, definitionText }) {
+    return (
+        <div>{ definitionTerm }: {definitionText}</div>
+    )
 }
 
 export default Definition

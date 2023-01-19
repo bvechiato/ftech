@@ -8,8 +8,7 @@ function Course({ name }) {
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
-        const query = ref(db, "Content");
-        console.log(query);
+        const query = ref(db, `Content/${name}`);
         return onValue(query, (snapshot) => {
           const data = snapshot.val();
           console.log(Object.keys(data));
@@ -25,7 +24,7 @@ function Course({ name }) {
 
     return (
         <div>
-            {courses.map((term) => <Term term={term}/>)}
+            {courses.map((term) => <Term key={name} course={name} term={term}/>)}
         </div>
     )
 }
