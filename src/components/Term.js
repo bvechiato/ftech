@@ -10,14 +10,14 @@ function Term({ course, term }) {
     useEffect(() => {
         const query = ref(db, `Content/${course}/${term}`);
         return onValue(query, (snapshot) => {
-          const data = snapshot.val();
-          console.log(Object.keys(data));
+            const data = snapshot.val();
+            console.log(Object.keys(data));
     
-          if (snapshot.exists()) {
-            Object.keys(data).map((term) => {
-                setTerms((terms) => [...terms, term]);
+            if (snapshot.exists()) {
+                Object.keys(data).map((term) => {
+                    setTerms((terms) => [...terms, term]);
             });
-          }
+            }
         });
       }, []);
 
