@@ -24,7 +24,7 @@ function Course({ name }) {
 
     return (
         <div>
-            {courses.map((term) => <Term key={name} course={name} term={term}/>)}
+            {courses.map((term, index) => <Term key={index} course={name} term={term}/>)}
         </div>
     )
 }

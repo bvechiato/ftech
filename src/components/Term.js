@@ -23,7 +23,8 @@ function Term({ course, term }) {
 
     return (
         <div>
-            {terms.map((definition) => <Definition key={definition} definition={definition}/>)}
+            <h2>- { term }</h2>
+            {terms.map((definition, index) => <Definition key={index} course={course} term={term} definition={definition}/>)}
         </div>
     )
 }
