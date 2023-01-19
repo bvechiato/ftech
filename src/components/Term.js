@@ -22,8 +22,8 @@ function Term({ course, term }) {
       }, []);
 
     return (
-        <div>
-            <h2>- { term }</h2>
+        <div className="container mx-auto bg-gray-100 rounded-xl p-8 m-10 pb-6">
+            <p className="text-lg pb-4 font-semibold text-gray-700">{ term }</p>
             {terms.map((definition, index) => <Definition key={index} course={course} term={term} definition={definition}/>)}
         </div>
     )

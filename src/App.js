@@ -4,13 +4,12 @@ import PC01 from './pages/PC01';
 import PC02 from './pages/PC02';
 import CreativeTech from './pages/CreativeTech';
 import Header from './components/Header';
-import Nav from './components/Nav';
+
 
 function App() {
   return (
-    <div>
+    <div className="w-2/3 m-auto">
       <Header />
-      <Nav />
 
       <Routes>
         <Route path="/pages/PC01" element={<PC01 />}>PC01</Route>
