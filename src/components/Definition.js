@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { db } from "../firebase";
 import { ref, onValue } from "firebase/database";
+import ReactMarkdown from "react-markdown";
 
 function Definition({ course, term, definition }) {
     const [definitionExp, setDefinition] = useState([]);
@@ -22,6 +23,7 @@ function Definition({ course, term, definition }) {
         <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100">
             <h5 className="mb-2 text-l font-bold tracking-tight text-gray-900">{definition}</h5>
             <p className="font-normal text-gray-700">{definitionExp}</p>
+            <ReactMarkdown className="text-s pt-4">`class Person:`</ReactMarkdown>
         </div>
     )
 }
