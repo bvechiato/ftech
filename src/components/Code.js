@@ -1,6 +1,8 @@
-function Code() {
+import ReactMarkdown from "react-markdown";
+
+function Code({ line }) {
   return (
-    <div>Code</div>
+    <ReactMarkdown className="text-s pt-4">`{ line }`</ReactMarkdown>
   )
 }
 
